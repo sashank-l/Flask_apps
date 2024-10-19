@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Weather Dashboard</h1>
+
+        <input type="text" id="location-input" placeholder="Enter location" />
+        <button onclick="getWeather()">Get Weather</button>
+        <button onclick="saveFavorite()">Save as Favorite</button>
+
+        <div id="weather-display">
+            <h2 id="location"></h2>
+            <p id="temperature"></p>
+            <p id="description"></p>
+        </div>
+
+        <h2>Favorite Locations</h2>
+        <ul id="favorites-list"></ul>
+        <button onclick="loadFavorites()">Load Favorites</button>
+
+        <h2>Weather History</h2>
+        <ul id="history-list"></ul>
+        <button onclick="loadWeatherHistory()">Load Weather History</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
