@@ -29,7 +29,7 @@ class WeatherHistory(db.Model):
     location = db.Column(db.String(100), nullable=False)
     temperature = db.Column(db.Float, nullable=False)
     description = db.Column(db.String(100), nullable=False)
-    timestamp = db.Column(db.DateTime, server_default=db.func.now())
+    timestamp = db.Column(db.DateTime, server_default=db.func.now()) #you can add more features here
 
 
 # initialize the database
